@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(51, 51, 51);
+}
+nav {
+  background-color: white;
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.logo {
+  color: rgb(51, 51, 51);
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: black;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.6s ease;
+  display: flexbox;
+  justify-content: flex-start;
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+}
+.show-links {
+  height: 209px;
+}
+ul {
+  list-style: none;
+  text-transform: capitalize;
+}
+a {
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+}
+li {
+  padding: 1rem 0;
+}
+li:active {
+  text-decoration: none;
+}
+li:visited {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 850px) {
+  nav {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    background: transparent;
+    padding: 1rem 5rem;
+    transition: all 0.5s ease;
+  }
+  .show-nav {
+    background-color: black;
+    color: white;
+    padding: 0 5rem;
+  }
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .logo {
+    color: white;
+  }
+  .logo:hover {
+    color: orange;
+    cursor: pointer;
+  }
+  .links {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  a {
+    color: white;
+  }
+  a:hover {
+    background: transparent;
+    transition: all 0.3s ease;
+    color: orange;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .section-1 {
+    background-position: center;
+  }
+  .section-2 {
+    background-position: center;
+  }
+  .section-3 {
+    background-position: center;
+  }
+}
+#idbtn {
+  color: white;
+}
+.section-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)),
+    url("https://www.rollingstone.fr/wp-content/uploads/2017/08/Takeshi-Kitano.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.container {
+  color: white;
+}
+.title {
+  text-transform: uppercase;
+  font-size: xx-large;
+}
+.description {
+  padding: 2rem 0;
+  font-size: x-large;
+}
+.first-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  font-size: large;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  transition: all 0.5s ease;
+}
+.first-btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: orange;
+}
+.section-2 {
+  min-height: 90vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://www.courte-focale.fr/wp-content/uploads/2018/05/Hana-Bi-Kitano_0.jpg");
+  background-size: cover;
+  padding: 2rem 3rem;
+  text-align: center;
+}
+.title-2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: xx-large;
+  padding: 0;
+}
+.title-underline {
+  width: 6rem;
+  height: 0.5rem;
+  background-color: orange;
+  margin: 0.5rem auto;
+}
+.bio-txt {
+  font-size: large;
+  color: rgb(255, 255, 255);
+  padding: 4rem 4rem;
+  letter-spacing: 2px;
+}
+.section-3 {
+  min-height: 90vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://res.cloudinary.com/ct-cloudinary/image/upload/c_fill,dpr_3.0,f_auto,g_center,h_440,q_80,w_779/v1627893290/sonatine_ilzo5a");
+  background-size: cover;
+  padding: 2rem 3rem;
+  text-align: center;
+}
+.title-3 {
+  color: white;
+  text-transform: uppercase;
+  font-size: xx-large;
+  padding: 0;
+}
+
+.movies-container {
+  width: 90vw;
+  height: 70vh;
+  margin: 3rem auto;
+  background: transparent;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+@media screen and (max-width: 850px) {
+  .bio-txt {
+    padding: 2rem 0;
+  }
+  .section-3 {
+    padding: 2rem 2rem;
+    overflow: scroll;
+  }
+  .movies-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 2rem auto;
+  }
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.film {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(255, 166, 0, 0.8);
+}
+.film:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+.section-4 {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://api-lesondier.imgix.net/65fa95c2-9927-417a-b1c7-9c5c745aab74.jpg?auto=compress,enhance,format&dpr=1&w=1190&h=661&fit=crop&crop=faces");
+  background-size: cover;
+  padding: 2rem 3rem;
+  text-align: center;
+}
+.title-4 {
+  color: white;
+  text-transform: uppercase;
+  font-size: xx-large;
+  padding: 0;
+}
+.galerie-container {
+  width: 100%;
+  height: 80vh;
+  margin: 2rem auto;
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: "a a b c" "d d d d" "e f f g" "e h h i";
+  column-gap: 1rem;
+  row-gap: 1rem;
+  overflow: scroll;
+}
+.tile-1 {
+  grid-area: a;
+}
+.tile-2 {
+  grid-area: b;
+}
+.tile-3 {
+  grid-area: c;
+}
+.tile-4 {
+  grid-area: d;
+}
+.tile-5 {
+  grid-area: e;
+}
+.tile-6 {
+  grid-area: f;
+}
+.tile-7 {
+  grid-area: g;
+}
+.tile-8 {
+  grid-area: h;
+}
+.tile-9 {
+  grid-area: i;
+}
