@@ -119,9 +119,7 @@ li:visited {
     background-position: center;
   }
 }
-#idbtn {
-  color: white;
-}
+
 .section-1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)),
     url("https://www.rollingstone.fr/wp-content/uploads/2017/08/Takeshi-Kitano.jpg");
@@ -188,7 +186,7 @@ li:visited {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://res.cloudinary.com/ct-cloudinary/image/upload/c_fill,dpr_3.0,f_auto,g_center,h_440,q_80,w_779/v1627893290/sonatine_ilzo5a");
   background-size: cover;
-  padding: 2rem 3rem;
+  padding: 2rem 0;
   text-align: center;
 }
 .title-3 {
@@ -214,7 +212,7 @@ li:visited {
     padding: 2rem 0;
   }
   .section-3 {
-    padding: 2rem 2rem;
+    padding: 2rem 0;
     overflow: scroll;
   }
   .movies-container {
